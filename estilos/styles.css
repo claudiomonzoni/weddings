@@ -1,0 +1,272 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Prata", serif;
+  color: #2e4565;
+}
+
+h3 {
+  color: #bda47b !important;
+}
+
+body,
+html {
+  height: 100%;
+  line-height: 1.8;
+  font-family: "Roboto", sans-serif;
+  color: #1f1f1f;
+  font-size: 20px;
+}
+
+/* Create a Parallax Effect */
+.bgimg-1,
+.bgimg-2,
+.bgimg-3 {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+  background-image: url("/imas/cover_bodas_ixtapa_zihuatanejo.jpg");
+  min-height: 100%;
+}
+
+/* Second image (Portfolio) */
+.bgimg-2 {
+  background-image: url("/imas/beachPlayaBodaWedding.jpg");
+  min-height: 400px;
+}
+
+/* Third image (Contact) */
+.bgimg-3 {
+  background-image: url("/imas/weddingsMexicoIxtapa.jpg");
+  min-height: 400px;
+}
+
+.w3-wide {
+  letter-spacing: 10px;
+}
+
+.w3-hover-opacity {
+  cursor: pointer;
+}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1600px) {
+  .bgimg-1,
+  .bgimg-2,
+  .bgimg-3 {
+    background-attachment: scroll;
+    min-height: 400px;
+  }
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+#myNavbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#myNavbar a {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+#myNavbar .logoMenu {
+  padding: 0.7em;
+}
+
+#myNavbar .logoMenu img {
+  width: 60px;
+}
+
+#myNavbar .ligasMenu {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+#myNavbar .ligasMenu i {
+  font-size: 1.5em;
+  color: #bda47b;
+}
+
+#estadisticas {
+  background-color: #2e4565;
+  color: #bda47b;
+}
+
+#estadisticas span {
+  font-family: "Prata", serif;
+}
+
+#sublogo {
+  max-width: 240px;
+  height: auto;
+}
+
+#servicios {
+  background-color: #fffbdc;
+}
+
+#servicios .servicio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 2em;
+}
+
+#servicios img {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 50%;
+          flex: 1 1 50%;
+}
+
+#servicios .bandeja {
+  display: inherit;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 50%;
+          flex: 1 1 50%;
+  padding: 2em;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+@media (max-width: 479px) {
+  #servicios .bandeja {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+}
+
+#servicios .bandeja h2 {
+  margin: 0em;
+}
+
+#servicios .bandeja p {
+  margin: .2em 0;
+}
+
+@media (max-width: 479px) {
+  #servicios .servicio:nth-child(2n) .bandeja:first-child {
+    -webkit-box-ordinal-group: initial;
+        -ms-flex-order: initial;
+            order: initial;
+  }
+}
+
+#servicios .servicio:nth-child(2n) .bandeja:first-child {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+@media (max-width: 479px) {
+  #servicios .servicio:nth-child(2n) .bandeja:first-child {
+    -webkit-box-ordinal-group: initial;
+        -ms-flex-order: initial;
+            order: initial;
+  }
+}
+
+.videoWrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  width: 100%;
+  height: 0;
+  background-color: khaki;
+}
+
+.videoWrapper video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+footer {
+  background-color: #bda47b;
+}
+
+footer i {
+  color: #fff;
+}
+
+footer img {
+  width: 100px;
+  height: auto;
+}
+
+.glide__slide {
+  background-color: #2e4565;
+  color: #bda47b;
+}
+
+#play {
+  z-index: 200;
+  width: 70px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+.wa {
+  width: 50px;
+  position: fixed;
+  z-index: 600;
+  right: 20px;
+  bottom: 20px;
+}
+
+#datosConta i {
+  color: #bda47b;
+}
+
+#paquete {
+  background-color: #2e4565;
+  color: #fff;
+}
+
+#paquete h4 {
+  color: #fff;
+}
+
+#paquete i {
+  font-size: 2em;
+  margin-right: .5em;
+}
+
+#paquete a {
+  vertical-align: middle;
+}
+/*# sourceMappingURL=styles.css.map */

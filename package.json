@@ -1,0 +1,23 @@
+{
+  "name": "weddings",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel index.html --open ",
+    "pro": "parcel build index.html --public-url ./ --no-minify"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.32.8"
+  },
+  "dependencies": {
+    "gale": "0.0.0",
+    "jquery": "^3.6.0",
+    "js": "^0.1.0",
+    "sendmail": "^1.6.1"
+  }
+}
