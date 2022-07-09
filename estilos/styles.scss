@@ -1,4 +1,3 @@
-
 //media query
 $cel: 479px;
 $nocel: 479px;
@@ -50,6 +49,10 @@ h6 {
 }
 h3 {
   color: $cafe !important;
+}
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 body,
 html {
@@ -124,7 +127,7 @@ img {
   .ligasMenu {
     flex: 1;
     justify-content: flex-end;
-    i{
+    i {
       font-size: 1.5em;
       color: $cafe;
     }
@@ -143,7 +146,7 @@ img {
 }
 
 #servicios {
-background-color: rgb(255, 251, 220);
+  background-color: rgb(255, 251, 220);
   .servicio {
     display: flex;
     flex-wrap: wrap;
@@ -155,37 +158,35 @@ background-color: rgb(255, 251, 220);
   .bandeja {
     display: inherit;
     flex: 1 1 50%;
-    @include cel{
+    @include cel {
       flex-basis: 100%;
     }
     padding: 2em;
     flex-wrap: wrap;
     align-items: center;
     align-content: center;
-    h2{
-      margin:0em;
+    h2 {
+      margin: 0em;
     }
-    p{
-      margin: .2em 0;
+    p {
+      margin: 0.2em 0;
     }
   }
 
-  .servicio:nth-child(2n){
-    @include cel{
-      .bandeja:first-child{
+  .servicio:nth-child(2n) {
+    @include cel {
+      .bandeja:first-child {
         order: initial;
       }
     }
-    .bandeja:first-child{
+    .bandeja:first-child {
       order: 1;
-      @include cel{
+      @include cel {
         order: initial;
       }
     }
   }
 }
-
-
 
 .videoWrapper {
   position: relative;
@@ -224,29 +225,58 @@ footer {
   -webkit-transform: translate(-50%, -50%);
   position: absolute;
 }
-.wa{
+.wa {
   width: 50px;
   position: fixed;
   z-index: 600;
-  right:20px;
-  bottom:20px;
+  right: 20px;
+  bottom: 20px;
 }
-#datosConta{
-  i{
+#datosConta {
+  i {
     color: $cafe;
   }
 }
-#paquete{
+#paquete {
   background-color: $azul;
   color: #fff;
-  h4{
-    color:#fff;
+  h4 {
+    color: #fff;
   }
-  i{
+  i {
     font-size: 2em;
-    margin-right: .5em;
+    margin-right: 0.5em;
   }
-  a{
+  a {
     vertical-align: middle;
   }
+}
+.btn {
+  background-color: $cafe;
+  color: #fff;
+  i {
+    color: #fff!important;
+  }
+  b{
+    color: #fff;
+  }
+  &:hover {
+    background-color: #fff!important;
+    color: $cafe!important;
+    border: solid $cafe 1px;
+    i{
+      color: $cafe;
+    }
+    b{
+      color: $cafe;
+    }
+  }
+}
+b {
+  color: $cafe;
+}
+
+.desactivado {
+  opacity: 0.2;
+  pointer-events: none;
 }

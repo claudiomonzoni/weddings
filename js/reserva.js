@@ -1,11 +1,12 @@
 import moment from "moment";
 // import "moment/locale/es";
 
-console.log(window.location.pathname);
-if (window.location.pathname === "/") {
+if (window.location.pathname === "/indexes.html") {
   import("moment/locale/es").then((lang) => {
     return lang;
   });
+  moment.locale("es");
+  console.log("es")
 }
 
 const revisar = document.getElementById("revisar");
@@ -23,14 +24,13 @@ const ua = navigator.userAgent;
 
 //si es cel app si es pc web.app
 const actualizar = (e) => {
-  console.log("first")
   e.preventDefault();
 
   if (
-    invitados.value === "" ||
-    fecha.value === "" ||
+    nombre.value === "" ||
     email.value === "" ||
-    nombre.value === ""
+    fecha.value === "" ||
+    invitados.value === "" 
   ) {
     console.log("vacio");
   } else {
@@ -40,23 +40,23 @@ const actualizar = (e) => {
   //comprobar si es cel o pc
   let whats = "";
   if (/Mobile/i.test(ua)) {
-    whats = "https://api.whatsapp.com/send/?phone=5217551019549&text=";
+    whats = "https://api.whatsapp.com/send/?phone=5217551149568&text=";
   } else {
-    whats = "https://web.whatsapp.com/send/?phone=5217551019549&text=";
+    whats = "https://web.whatsapp.com/send/?phone=5217551149568&text=";
   }
   //obtener las noches
 
-  moment.locale("es");
+
   const fechaE = moment(fecha.value).format("dddd D MMMM YYYY");
  
   const mensaje = `
   <hr>
-  <b>Por favor revise sus datos</b>
+  <b>Please check that are correct the data</b>
   <hr>
-Nombre: <b> ${nombre.value} </b> <br>
+Name: <b> ${nombre.value} </b> <br>
 Email: <b> ${email.value} </b> <br>
-Fecha del evento: <b> ${fechaE} </b> <br>
-Numero de invitados: <b> ${invitados.value}</b>
+Event date: <b> ${fechaE} </b> <br>
+Invites: <b> ${invitados.value}</b>
 `;
   revisar.innerHTML = mensaje;
   envio( whats, fechaE);
@@ -70,7 +70,7 @@ const envio = (whats, fechaE) => {
   `;
 
   const urlEn = `
-  ${whats}Hi,%20I%20contact%20from%20zihuacentro.com.:%0aName:%20${nombre.value},%0aNo.%20de%20adultos:%20${nombre.value},%0aNo.%20de%20niños:%20${email.value}%0aFecha%20de%20Llagada:%20${fechaE}%0aFecha%20de%20Salida:%20${invitados.value}%0aComentarios:%20
+  ${whats}Hi,%20I%20contact%20from%weddingsinzihua.com.:%0aName:%20${nombre.value},%0aNo.%20de%20Email:%20${email.value}%0aEvent%20de%20date:%20${fechaE}%0aInvites:%20${invitados.value}%0aLet's%20talk%20😁:%20
   `;
 
   if (window.location.pathname === "/") {
