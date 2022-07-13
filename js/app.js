@@ -1,4 +1,4 @@
-
+import Glide from "@glidejs/glide";
 
 // Modal Image Gallery
 import {onClick} from "./galeria.js"
@@ -50,5 +50,6 @@ play.addEventListener("click", (e) => {
     play.style.opacity = "1"
   });
   
-//   contacto
+//   testimonios
+new Glide('.glide').mount()
   
