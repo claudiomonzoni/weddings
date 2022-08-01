@@ -257,19 +257,19 @@ footer {
   background-color: $cafe;
   color: #fff;
   i {
-    color: #fff!important;
+    color: #fff !important;
   }
-  b{
+  b {
     color: #fff;
   }
   &:hover {
-    background-color: #fff!important;
-    color: $cafe!important;
+    background-color: #fff !important;
+    color: $cafe !important;
     border: solid $cafe 1px;
-    i{
+    i {
       color: $cafe;
     }
-    b{
+    b {
       color: $cafe;
     }
   }
@@ -281,4 +281,18 @@ b {
 .desactivado {
   opacity: 0.2;
   pointer-events: none;
+}
+
+.glide{
+
+  border-bottom: solid 2px $azul;
+}
+.glide__track {
+  .glide__slide {
+    padding: 1em;
+    color: #fff;
+    footer{
+    background-color: $azul;
+    }
+  }
 }

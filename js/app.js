@@ -51,5 +51,7 @@ play.addEventListener("click", (e) => {
   });
   
 //   testimonios
-new Glide('.glide').mount()
+new Glide('.glide',{
+    autoplay: 5000,
+}).mount()
   
