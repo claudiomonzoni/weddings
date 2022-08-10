@@ -6,9 +6,7 @@ if (window.location.pathname === !"/") {
     return lang;
   });
   moment.locale("es");
-  console.log("es")
 }
-
 
 
 const revisar = document.getElementById("revisar");
@@ -42,7 +40,7 @@ const actualizar = (e) => {
   //comprobar si es cel o pc
   let whats = "";
   if (/Mobile/i.test(ua)) {
-    whats = "https://api.whatsapp.com/send/?phone=5217551149568&text=";
+    whats = "https://api.whatsapp.com/send/?phone=&text=";
   } else {
     whats = "https://web.whatsapp.com/send/?phone=5217551149568&text=";
   }
