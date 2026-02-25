@@ -1,5 +1,5 @@
-@import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
-@import "node_modules/@glidejs/glide/src/assets/sass/glide.theme";
+@use "node_modules/@glidejs/glide/src/assets/sass/glide.core" as *;
+@use "node_modules/@glidejs/glide/src/assets/sass/glide.theme" as *;
 //media query
 $cel: 479px;
 $nocel: 479px;
@@ -283,16 +283,176 @@ b {
   pointer-events: none;
 }
 
-.glide{
-
+.glide {
   border-bottom: solid 2px $azul;
 }
 .glide__track {
   .glide__slide {
     padding: 1em;
     color: #fff;
-    footer{
-    background-color: $azul;
+    footer {
+      background-color: $azul;
     }
+  }
+}
+
+/* Estilos minimalistas y elegantes para cards */
+
+#partners{
+  h2{
+    text-align: left!important;
+    color: $cafe;
+  }
+  @include cel {
+    text-align: center;
+    p{
+      padding: 1rem;
+    }
+  }
+}
+.aliados {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+
+}
+
+.card {
+  background:rgba(255, 251, 220, 0.2);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba($azul, 0.1);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  border: 1px solid rgba($cafe, 0.2);
+  
+  &:first-child{
+    background:url('/imas/nvitaciones-bodas-digitales.webp'), rgba(255, 251, 220, 0.2);
+    background-size: 110%;
+    background-repeat: no-repeat;
+    background-position:-150% bottom;
+  }
+  &:nth-child(2){
+    background:url('/imas/nvitaciones-decoracion.webp'), rgba(255, 251, 220, 0.2);
+    background-size: 110%;
+    background-repeat: no-repeat;
+    background-position:-150% bottom;
+  }
+  &:nth-child(3){
+    background:url('/imas/nvitaciones-musica.webp'), rgba(255, 251, 220, 0.2);
+    background-size: 110%;
+    background-repeat: no-repeat;
+    background-position:-150% bottom;
+  }
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba($azul, 0.15);
+}
+
+.card-content {
+  padding: 2rem;
+  color: $azul;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card-content {
+  h3 {
+    color: $azul !important;
+    font-size: clamp(1.1rem, 1.3vw, 1.4rem)!important;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid rgba($cafe, 0.3);
+    padding-bottom: 0.5rem;
+  }
+}
+
+.card-content p {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  font-size: clamp(.9rem, .9rem , 1rem);
+}
+
+.card-content ul {
+  list-style: none;
+  padding: 0;
+  margin: .5rem 0;
+  font-size: clamp(.9rem, .9rem , 1rem);
+  @include cel {
+    border-top: solid 1px rgba($cafe, 0.3);
+    text-align: left;
+    padding: .8rem 0 0;
+  }
+}
+
+.card-content li {
+  padding: 0.5rem 0 0;
+  color: $azul;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.card-content li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: $cafe;
+  font-weight: bold;
+}
+
+/* Estilos para botones/anchor en cards - Solución robusta */
+  .card {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+    > *:not(.btn) {
+      flex-shrink: 0;
+    }
+    
+    .btn {
+      margin-top: auto;
+      align-self: center;
+      width: 100%;
+
+    }
+  }
+
+  /* Variantes de cards */
+  .card.minimal {
+    background: #f8f9fa;
+    border: 1px solid rgba($cafe, 0.15);
+    box-shadow: 0 2px 12px rgba($azul, 0.05);
+  }
+
+.card.elegant {
+  background: linear-gradient(135deg, #ffffff 0%, #f5f7fa 100%);
+  border: 1px solid rgba($cafe, 0.25);
+}
+
+.card.elegant .card-content h3 {
+  color: $azul;
+  border-bottom-color: rgba($cafe, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .aliados {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .card-content {
+    padding: 1.5rem;
   }
 }

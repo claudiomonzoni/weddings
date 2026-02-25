@@ -41,3 +41,95 @@ body, html {
     min-height: 400px;
   }
 }
+
+/* Estilos minimalistas y elegantes para cards */
+.aliados {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  border: 1px solid rgba(119, 119, 119, 0.1);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.card-content {
+  padding: 2rem;
+  color: #555;
+}
+
+.card-content h3 {
+  color: #333;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid rgba(119, 119, 119, 0.2);
+  padding-bottom: 0.5rem;
+}
+
+.card-content p {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.card-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.card-content li {
+  padding: 0.5rem 0;
+  color: #777;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.card-content li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #888;
+  font-weight: bold;
+}
+
+/* Variantes de cards */
+.card.minimal {
+  background: #fafafa;
+  border: 1px solid #eee;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+}
+
+.card.elegant {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  border: 1px solid rgba(119, 119, 119, 0.15);
+}
+
+.card.elegant .card-content h3 {
+  color: #444;
+  border-bottom-color: rgba(119, 119, 119, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .aliados {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .card-content {
+    padding: 1.5rem;
+  }
+}
